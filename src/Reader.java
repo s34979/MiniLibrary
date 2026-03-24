@@ -31,4 +31,8 @@ public class Reader
             System.out.println("No books to return.");
         }
     }
+    public String getFirstName()
+    {
+        return firstName;
+    }
 }

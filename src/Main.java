@@ -44,5 +44,12 @@ public class Main
 
                 readers[0].printData();
 
+                Reader r1=new Reader("Vedika", "Jain", 101, 0);
+
+        Library library = new Library(books);
+
+        library.borrowBook("Harry Potter", r1);
+        library.returnBook("Harry Potter", r1);
+
     }
 }

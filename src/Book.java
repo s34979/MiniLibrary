@@ -23,18 +23,31 @@ public class Book
     }
     public void borrow()
     {
-        if (available) {
+        if (available)
+        {
             available = false;
             System.out.println("Book borrowed successfully.");
-        } else {
+        } else
+        {
             System.out.println("Book is already borrowed.");
         }
     }
     public void returnBook()
     {
-        available=true;
+        available = true;
         System.out.println("Book returned successfully.");
+    }
+
+        public String getTitle()
+        {
+            return title;
+        }
+        public boolean isAvailable()
+        {
+            return available;
+        }
+
 
 
     }
-}
+
