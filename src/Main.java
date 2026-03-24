@@ -2,36 +2,47 @@ public class Main
 {
     public static void main (String[] args)
     {
-        Book b1= new Book("Harry Potter", "J.K. Rowling", 500, true);
-        Book b2= new Book("Atomic Habits", "James Clear", 300, true);
-        Book b3= new Book("The Alchemist", "Paulo Coelho", 200, true);
 
-        b1.printInfo();
-        System.out.println();
 
-        b1.borrow();
-        b1.printInfo();
-        System.out.println();
 
-        b1.returnBook();
-        b1.printInfo();
-        System.out.println();
+                Book[] books = new Book[3];
 
-        Reader r1 = new Reader("Vedika", "Jain", 101, 0);
-        Reader r2 = new Reader("Aarav", "Sharma", 102, 1);
+                books[0] = new Book("Harry Potter", "J.K. Rowling", 500, true);
+                books[1] = new Book("Atomic Habits", "James Clear", 300, true);
+                books[2] = new Book("The Alchemist", "Paulo Coelho", 200, true);
 
-        r1.printData();
-        System.out.println();
 
-        r1.increaseBorrowedCount();
-        r1.printData();
-        System.out.println();
+                System.out.println("All books:");
+                for (int i = 0; i < books.length; i++) {
+                    books[i].printInfo();
+                    System.out.println();
+                }
 
-        r1.decreaseBorrowedCount();
-        r1.printData();
-        System.out.println();
 
-        r2.printData();
+                System.out.println("Borrowing first book...\n");
+                books[0].borrow();
+
+                books[0].printInfo();
+                System.out.println();
+
+
+                Reader[] readers = new Reader[2];
+
+                readers[0] = new Reader("Vedika", "Jain", 101, 0);
+                readers[1] = new Reader("Aarav", "Sharma", 102, 0);
+
+
+                System.out.println("Readers:");
+                for (int i = 0; i < readers.length; i++) {
+                    readers[i].printData();
+                    System.out.println();
+                }
+
+
+                System.out.println("Reader 1 borrows a book...\n");
+                readers[0].increaseBorrowedCount();
+
+                readers[0].printData();
 
     }
 }
